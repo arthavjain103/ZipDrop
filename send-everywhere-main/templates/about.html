@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block homepage %}
+<!-- Main Container -->
+<div class="relative min-h-screen bg-gray-50 dark:bg-gray-900 transition-all duration-500">
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 md:px-16 lg:px-24 pt-24 pb-20 flex flex-col md:flex-row items-center gap-12">
+        
+        <!-- Left Content -->
+        <div class="max-w-xl text-center md:text-left space-y-6">
+            <h1  class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text
+           dark:[--grad-start:#00ffff] dark:[--grad-mid:#ff00ff] dark:[--grad-end:#00ffff]
+           leading-tight"
+    style="
+      background-image: linear-gradient(45deg, var(--grad-start), var(--grad-mid), var(--grad-end));
+      --grad-start: #000000;
+      --grad-mid: #a0a0a0;
+      --grad-end: #000000;
+    "
+  >
+    Share Files Faster
+            </h1>
+            <h1  class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text
+           dark:[--grad-start:#00ffff] dark:[--grad-mid:#ff00ff] dark:[--grad-end:#00ffff]
+           leading-tight pb-3  tracking-wider"
+    style="
+      background-image: linear-gradient(45deg, var(--grad-start), var(--grad-mid), var(--grad-end));
+      --grad-start: #0f0c0cff;
+      --grad-mid: #000000;
+      --grad-mid: #a0a0a0;
+      --grad-end: #000000;
+    "
+  >
+  
+                 Safer with ZipDrop</span>
+            </h1>
+      
+            <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                No sign-ups, no hassle. Upload your file, get a secure code, and share it instantly.
+                Our modern file-sharing platform ensures speed, simplicity, and privacy.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                
+                <a href="/register"
+                   class="px-6 py-3 rounded-xl bg-blue-600 text-white font-medium shadow-md 
+                          hover:bg-blue-700 dark:hover:bg-blue-500 transition">
+                    Create Account
+                </a>
+            </div>
+        </div>
+
+     
+        <div class="flex justify-center w-full max-w-lg">
+            <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300">
+               
+                <img src="{% static 'img/about_me_light.png' %}"
+                     alt="Platform Preview" 
+                     class="rounded-xl dark:hidden">
+                <img src="{% static 'img/about_me_dark.png' %}"
+                     alt="Platform Preview"
+                     class="rounded-xl hidden dark:block">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-6 md:px-16 lg:px-24 py-16 grid md:grid-cols-3 gap-8">
+
+        <!-- Feature 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+            <div class="bg-blue-600 text-white w-14 h-14 flex items-center justify-center rounded-xl mb-5 text-lg font-bold mx-auto">01</div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Effortless Sharing</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                Upload your file and generate a unique code instantly. Share it with anyone, anywhere.
+            </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+            <div class="bg-purple-600 text-white w-14 h-14 flex items-center justify-center rounded-xl mb-5 text-lg font-bold mx-auto">02</div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Secure & Private</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                Files are encrypted, and only users with the unique code can access them.
+            </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+            <div class="bg-pink-600 text-white w-14 h-14 flex items-center justify-center rounded-xl mb-5 text-lg font-bold mx-auto">03</div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Modern Experience</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                Responsive design, smooth animations, and perfect dark mode for a clean interface.
+            </p>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

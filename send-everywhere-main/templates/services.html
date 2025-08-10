@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block homepage %}
+
+<div  id="services"
+class="container mx-auto mt-12 p-8 rounded-lg transition-all duration-300"
+     style="height: 93vh;"
+     :class="{ 'bg-black text-white': document.documentElement.classList.contains('dark'), 'bg-gradient-to-r from-blue-100 to-pink-100 text-gray-900': !document.documentElement.classList.contains('dark') }">
+   <h2 class="text-4xl font-extrabold mb-6 text-center mt-5 text-transparent bg-clip-text
+           tracking-wider leading-tight"
+    style="
+        background-image: linear-gradient(
+                  45deg, var(--grad-start), var(--grad-mid1), var(--grad-mid2), var(--grad-end)
+                );
+                --grad-start: #0f0c0c;
+                --grad-mid1: #000000;
+                --grad-mid2: rgba(229, 223, 223, 1);
+                --grad-end: #000000;
+    ">
+    Our Services
+</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-400 mb-10 leading-relaxed text-center">
+        At Send Everywhere, we offer a range of services designed to make file sharing seamless and secure.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-300 flex flex-col items-center text-center">
+            <svg class="w-16 h-16 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 10a4 4 0 100-8 4 4 0 000 8zm0 2v7"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Quick File Sharing</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+                Share files with others in just a few clicks, without any complicated setups.
+            </p>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <svg class="w-16 h-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v3m0 0v3m-4-3h8"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12V5a2 2 0 012-2h10a2 2 0 012 2v7"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Flexible Sharing Options</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+                Share files securely with a unique key or create direct links or send files via email for easy distribution.
+            </p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <svg class="w-16 h-16 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h2a2 2 0 002-2v-3a2 2 0 00-2-2h-2M9 12H7a2 2 0 01-2-2V7a2 2 0 012-2h2m3 0h-2a2 2 0 00-2 2v5a2 2 0 002 2h2m0 0v5m-2-5h2"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">User Authentication</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+                Register and log in for access to advanced features.
+            </p>
+        </div>
+        <!-- Service 4 -->
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            <svg class="w-16 h-16 text-purple-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h2a2 2 0 002-2v-3a2 2 0 00-2-2h-2M9 12H7a2 2 0 01-2-2V7a2 2 0 012-2h2m3 0h-2a2 2 0 00-2 2v5a2 2 0 002 2h2m0 0v5m-2-5h2"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">User-Friendly Interface</h3>
+            <p class="text-gray-700 dark:text-gray-400">
+                Our minimalist design ensures a smooth and intuitive user experience.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

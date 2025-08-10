@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block homepage %}
+
+<section 
+    class="relative bg-gray-50 dark:bg-gray-900 py-20 px-6 sm:px-10 lg:px-20"
+>
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+        <h2
+            class="text-4xl pt-10 md:text-6xl font-extrabold text-transparent bg-clip-text
+                   tracking-wider leading-tight
+                   dark:[--grad-start:#00ffff] dark:[--grad-mid1:#ff00ff] dark:[--grad-mid2:#ff8800] dark:[--grad-end:#00ffff]"
+            style="
+                background-image: linear-gradient(
+                  45deg, var(--grad-start), var(--grad-mid1), var(--grad-mid2), var(--grad-end)
+                );
+                --grad-start: #0f0c0c;
+                --grad-mid1: #000000;
+                --grad-mid2: rgba(229, 223, 223, 1);
+                --grad-end: #000000;
+            "
+        >
+            Get in Touch
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-slate-400 text-lg">
+            We’ll reply to your message as soon as possible.
+        </p>
+    </div>
+
+    <!-- Content Layout -->
+    <div class="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+
+        <!-- Left: Contact Info Cards -->
+        <div class="space-y-6">
+
+            <!-- Address Card -->
+            <div class="flex items-start gap-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 to-purple-500 text-white">
+                    <!-- Location Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Our Address</h3>
+                    <p class=" text-gray-600 dark:text-slate-400">1230 Maecenas Street Donec Road</p>
+                    <p class="text-gray-600 dark:text-slate-400">New York, EEUU</p>
+                </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="flex items-start gap-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-teal-500 text-white">
+                    <!-- Phone Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+                        <path d="M15 7a2 2 0 0 1 2 2"></path>
+                        <path d="M15 3a6 6 0 0 1 6 6"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Contact</h3>
+                    <p class="text-gray-600 dark:text-slate-400">Mobile: +1 (123) 456-7890</p>
+                    <p class="text-gray-600 dark:text-slate-400">Mail: tailnext@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="flex items-start gap-4 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-pink-500 to-red-500 text-white">
+                    <!-- Clock Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                        <path d="M12 7v5l3 3"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Working Hours</h3>
+                    <p class="text-gray-600 dark:text-slate-400">Mon - Fri: 08:00 - 17:00</p>
+                    <p class="text-gray-600 dark:text-slate-400">Sat & Sun: 08:00 - 12:00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition p-8">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Share your Experience</h3>
+            <form class="space-y-5" method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your name"
+                       class="w-full rounded-md border border-gray-300 py-3 px-4 shadow-sm focus:ring-2 focus:ring-blue-400 dark:bg-gray-900 dark:text-white">
+                <input type="email" name="email" placeholder="Your email address"
+                       class="w-full rounded-md border border-gray-300 py-3 px-4 shadow-sm focus:ring-2 focus:ring-blue-400 dark:bg-gray-900 dark:text-white">
+                <textarea name="message" rows="5" placeholder="Write your message..."
+                          class="w-full rounded-md border border-gray-300 py-3 px-4 shadow-sm focus:ring-2 focus:ring-blue-400 dark:bg-gray-900 dark:text-white"></textarea>
+                <button type="submit"
+                        class="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
