@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 import os
 import uuid
-from ZipDrop import settings
+from sendEverywhere import settings
 from .models import File
 from django.http import FileResponse
 from . import task
